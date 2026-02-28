@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>俄罗斯方块</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>俄罗斯方块</h1>
+    
+    <div class="game-info">
+      <div class="score-board">
+        <div class="score">得分: <span id="score">0</span></div>
+        <div class="level">等级: <span id="level">1</span></div>
+        <div class="lines">消除行数: <span id="lines">0</span></div>
+      </div>
+      
+      <div class="next-piece">
+        <div>下一个:</div>
+        <canvas id="nextCanvas" width="120" height="120"></canvas>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="tetrisCanvas" width="300" height="600"></canvas>
+    </div>
+    
+    <div class="controls">
+      <div class="keyboard-controls">
+        <h3>键盘控制 (PC)</h3>
+        <p>← → : 左右移动</p>
+        <p>↑ : 旋转</p>
+        <p>↓ : 加速下降</p>
+        <p>空格 : 瞬间下落</p>
+      </div>
+      
+      <div class="touch-controls">
+        <h3>触摸控制 (移动设备)</h3>
+        <button id="leftBtn">←</button>
+        <button id="rotateBtn">↻</button>
+        <button id="rightBtn">→</button>
+        <button id="downBtn">↓</button>
+        <button id="dropBtn">⤓</button>
+      </div>
+    </div>
+    
+    <div class="game-buttons">
+      <button id="startBtn">开始游戏</button>
+      <button id="pauseBtn">暂停</button>
+      <button id="resetBtn">重置</button>
+    </div>
+    
+    <div class="ranking">
+      <h3>排行榜</h3>
+      <ul id="rankingList">
+        <!-- 排行榜内容将通过JavaScript动态加载 -->
+      </ul>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
